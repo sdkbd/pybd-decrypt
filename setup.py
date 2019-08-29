@@ -20,7 +20,12 @@ setup(
 
     packages=['pybd_decrypt'],
     py_modules=[],
-    install_requires=['pycrypto', 'pywe_utils'],
+    # Python3.x
+    # from Crypto.Util.py3compat import byte_string ImportError: cannot import name 'byte_string'
+    # pip3 uninstall pycrypto
+    # pip3 uninstall pycryptodome
+    # pip3 install pycryptodome
+    install_requires=['pycryptodome', 'pywe_utils'],
 
     classifiers=[
         "License :: OSI Approved :: BSD License",
